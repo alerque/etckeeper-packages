@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Updating lists of installed packages using etckeeper-packages
+Depends = coreutils
+When = PostTransaction
+Exec = /usr/bin/etckeeper-packages.sh
