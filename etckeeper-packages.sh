@@ -8,5 +8,5 @@ set -e
 cd ${CFGDIR}
 
 ${PACMAN} -Qqen > native.list
-${PACMAN} -Qqem > foreign.list
+${PACMAN} -Qqem > foreign.list ||:
 ${PACMAN} -Qqet > explicit.list
